@@ -12,29 +12,29 @@ const current = Astro.url.pathname;
 <div class="links">
 
 <a
-    href={`${base}about`}
-    class={current.endsWith("/about") ? "active" : ""}
+href={`${base}about/`}
+class={current.endsWith("/about/") ? "active" : ""}
 >
 about
 </a>
 
 <a
-    href={`${base}tech`}
-    class={current.includes("/tech") ? "active" : ""}
+href={`${base}tech/`}
+class={current.includes("/tech") ? "active" : ""}
 >
 tech
 </a>
 
 <a
-    href={`${base}creative`}
-    class={current.endsWith("/creative") ? "active" : ""}
+href={`${base}creative/`}
+class={current.endsWith("/creative/") ? "active" : ""}
 >
 creative
 </a>
 
 <a
-    href={`${base}contact`}
-    class={current.endsWith("/contact") ? "active" : ""}
+href={`${base}contact/`}
+class={current.endsWith("/contact/") ? "active" : ""}
 >
 contact
 </a>
