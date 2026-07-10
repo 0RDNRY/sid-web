@@ -1,38 +1,41 @@
 ---
+const base = import.meta.env.BASE_URL;
 const current = Astro.url.pathname;
+
+const link = (path = "") => `${base}${path}`.replace(/\/{2,}/g, "/");
 ---
 
 <nav>
 
-<a href={new URL("/", Astro.site).pathname} class="logo">
+<a href={link()} class="logo">
 <strong>sid</strong>
 </a>
 
 <div class="links">
 
 <a
-href={new URL("/about/", Astro.site).pathname}
+href={link("about/")}
 class={current.includes("/about") ? "active" : ""}
 >
 about
 </a>
 
 <a
-href={new URL("/tech/", Astro.site).pathname}
+href={link("tech/")}
 class={current.includes("/tech") ? "active" : ""}
 >
 tech
 </a>
 
 <a
-href={new URL("/creative/", Astro.site).pathname}
+href={link("creative/")}
 class={current.includes("/creative") ? "active" : ""}
 >
 creative
 </a>
 
 <a
-href={new URL("/contact/", Astro.site).pathname}
+href={link("contact/")}
 class={current.includes("/contact") ? "active" : ""}
 >
 contact

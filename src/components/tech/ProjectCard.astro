@@ -1,15 +1,19 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const {
-    title,
-    description,
-    stack,
-    year,
-    href,
-    status
+  title,
+  description,
+  stack,
+  year,
+  href,
+  status
 } = Astro.props;
+
+const url = `${base}${href.replace(/^\//, "")}`;
 ---
 
-<a href={href} class="project-card">
+<a href={url} class="project-card">
 
 <div class="year">
 {year}
@@ -25,7 +29,7 @@ const {
 
 <div class="stack">
 
-{stack.map(item=>(
+{stack.map(item => (
 
 <span>{item}</span>
 
