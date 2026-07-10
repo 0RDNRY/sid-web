@@ -1,14 +1,44 @@
+---
+const base = import.meta.env.BASE_URL;
+const current = Astro.url.pathname;
+---
+
 <nav>
 
-<a href="/">
+<a href={base} class="logo">
 <strong>sid</strong>
 </a>
 
 <div class="links">
-<a href="/about">about</a>
-<a href="/tech">tech</a>
-<a href="/creative">creative</a>
-<a href="/contact">contact</a>
+
+<a
+    href={`${base}about`}
+    class={current.endsWith("/about") ? "active" : ""}
+>
+about
+</a>
+
+<a
+    href={`${base}tech`}
+    class={current.includes("/tech") ? "active" : ""}
+>
+tech
+</a>
+
+<a
+    href={`${base}creative`}
+    class={current.endsWith("/creative") ? "active" : ""}
+>
+creative
+</a>
+
+<a
+    href={`${base}contact`}
+    class={current.endsWith("/contact") ? "active" : ""}
+>
+contact
+</a>
+
 </div>
 
 </nav>
