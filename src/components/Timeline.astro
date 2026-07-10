@@ -1,0 +1,58 @@
+---
+const timeline = [
+  {
+    age: "0",
+    title: "Born in Kerala, India",
+    subtitle: ""
+  },
+  {
+    age: "15",
+    title: "Started freelancing",
+    subtitle: "Creative services"
+  },
+  {
+    age: "17",
+    title: "Graduated high school",
+    subtitle: ""
+  },
+  {
+    age: "17",
+    title: "Internship at Nike",
+    subtitle: "Remote Summer Campaign"
+  },
+  {
+    age: "18",
+    title: "Started university",
+    subtitle: "Computer Science & Cybersecurity"
+  }
+];
+---
+
+<section class="timeline">
+
+  <div class="timeline-header">
+    <span>Age</span>
+    <span>Event</span>
+  </div>
+
+  {timeline.map(item => (
+    <div class="timeline-item">
+
+      <div class="age">
+        {item.age}
+      </div>
+
+      <div class="content">
+        <div class="title">{item.title}</div>
+
+        {item.subtitle && (
+          <div class="subtitle">
+            {item.subtitle}
+          </div>
+        )}
+      </div>
+
+    </div>
+  ))}
+
+</section>

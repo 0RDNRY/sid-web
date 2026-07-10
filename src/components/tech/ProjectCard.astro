@@ -1,0 +1,42 @@
+---
+const {
+    title,
+    description,
+    stack,
+    year,
+    href,
+    status
+} = Astro.props;
+---
+
+<a href={href} class="project-card">
+
+<div class="year">
+{year}
+</div>
+
+<h2>
+{title}
+</h2>
+
+<p class="description">
+{description}
+</p>
+
+<div class="stack">
+
+{stack.map(item=>(
+
+<span>{item}</span>
+
+))}
+
+</div>
+
+<div class="status">
+
+{status}
+
+</div>
+
+</a>

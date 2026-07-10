@@ -1,0 +1,18 @@
+---
+import { pieces } from "../../data/creative";
+---
+
+<div class="gallery">
+
+{pieces.map((piece) => (
+
+    <img
+        src={piece.src}
+        alt={piece.alt}
+        class={`gallery-image ${piece.size ?? ""}`}
+        loading="lazy"
+    />
+
+))}
+
+</div>

@@ -1,0 +1,54 @@
+<div class="life-grid" id="life-grid"></div>
+
+<p class="life-age" id="life-age"></p>
+
+<script>
+const birthday = new Date("2005-03-15T00:00:00"); // <-- Change the day
+
+function render() {
+
+    const now = new Date();
+
+    const age =
+        (now - birthday) /
+        (365.2425 * 24 * 60 * 60 * 1000);
+
+    const wholeYears = Math.floor(age);
+    const progress = age - wholeYears;
+
+    const grid = document.getElementById("life-grid");
+    const label = document.getElementById("life-age");
+
+    grid.innerHTML = "";
+
+    for(let i = 0; i < 100; i++){
+
+        const block = document.createElement("div");
+
+        block.className = "block";
+
+        if(i < wholeYears){
+
+            block.classList.add("filled");
+
+        }else if(i === wholeYears){
+
+            block.classList.add("current");
+
+            block.style.opacity = 0.25 + progress * 0.75;
+
+        }
+
+        grid.appendChild(block);
+
+    }
+
+    label.textContent = `${age.toFixed(1)} years old`;
+
+}
+
+render();
+
+setInterval(render,1000);
+
+</script>
