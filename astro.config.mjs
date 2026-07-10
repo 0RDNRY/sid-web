@@ -1,3 +1,6 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 
-export default defineConfig({});
+export default defineConfig({
+  site: "https://0RDNRY.github.io",
+  base: "/sid-web"
+});
