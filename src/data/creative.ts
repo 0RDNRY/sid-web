@@ -1,28 +1,30 @@
+const base = import.meta.env.BASE_URL;
+
 export const pieces = [
   {
-    src: "/creative/nike-01.webp",
+    src: `${base}creative/nike-01.webp`,
     alt: "Nike Campaign",
     size: "large"
   },
   {
-    src: "/creative/nike-02.webp",
+    src: `${base}creative/nike-02.webp`,
     alt: "Nike Campaign"
   },
   {
-    src: "/creative/nike-03.webp",
+    src: `${base}creative/nike-03.webp`,
     alt: "Nike Campaign"
   },
   {
-    src: "/creative/poster-01.webp",
-    alt: "Poster Design"
+    src: `${base}creative/poster-01.webp`,
+    alt: "Poster"
   },
   {
-    src: "/creative/poster-02.webp",
-    alt: "Poster Design",
+    src: `${base}creative/poster-02.webp`,
+    alt: "Poster",
     size: "large"
   },
   {
-    src: "/creative/typography-01.png",
+    src: `${base}creative/typography-01.png`,
     alt: "Typography"
   }
 ];
